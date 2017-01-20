@@ -1,12 +1,12 @@
-# Angular-Template
+# Meal Tracker
 
- This is a template for angular 2, 1/16/2017
+ This app can track your meals and calories and details, 1/20/2017
 
  By [Kevin Finley](http://www.kfinley.com)
 
 ## Description
 
-This is a template for angular 2 for epicodus!
+With this app you can add meals or food and input calories, details, and name of your choice!
 
 ## Setup/Installation Requirements
 
