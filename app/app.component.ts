@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Meal } from './meal.model';
 
 @Component({
   selector: 'app-root',
@@ -10,8 +11,4 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
 
-}
-
-export class Meal {
-  constructor(public name: string, public details: string, public calories: number) { }
 }
