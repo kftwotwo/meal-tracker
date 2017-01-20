@@ -5,7 +5,7 @@ import { Meal } from './meal.model';
   selector: 'app-root',
   template: `
   <h3>Here are all the meals entered!</h3>
-  <new-meal></new-meal>
+  <new-meal (newMealSender)="addMeal($event)"></new-meal>
   <food-list [childMealList]="masterMeals" (clickSender)="editMeal($event)"></food-list>
   <edit-meal [childSelectedMeal]="selectedMeal" (doneButtonClickedSender)="finishedEditing()"></edit-meal>
   `
@@ -28,5 +28,9 @@ export class AppComponent {
  finishedEditing() {
    this.selectedMeal = null;
  }
+
+ addMeal(newMealFromChild: Meal) {
+    this.masterMeals.push(newMealFromChild);
+  }
 
 }
