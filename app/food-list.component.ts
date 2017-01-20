@@ -1,22 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, Input} from '@angular/core';
 import { Meal } from './meal.model';
 
 @Component({
   selector: 'food-list',
   template: `
     <ul>
-      <li *ngFor="let currentMeal of meals">{{currentMeal.name}} {{currentMeal.details}} {{currentMeal.calories}}</li>
+      <li *ngFor="let currentMeal of childMealList">{{currentMeal.name}} {{currentMeal.details}} {{currentMeal.calories}} <button (click)="editMeal(currentMeal)">Edit!</button></li>
     </ul>
   `
 })
 
 
 export class FoodListComponent {
-  meals: Meal[] = [
-    new Meal('Cookie', 'I wish I was the cookie monster', 320),
-    new Meal('Pie', 'Im not a fan of cake so pie is way better!', 211),
-    new Meal('Salad', 'Not as good as a steak', 30)
-  ];
+  @Input() childMealList: Meal[];
 
 
 }
