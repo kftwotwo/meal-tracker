@@ -5,7 +5,7 @@ import { Meal } from './meal.model';
   selector: 'food-list',
   template: `
     <ul>
-      <li *ngFor="let currentMeal of meals">{{currentMeal.name}} {{currentMeal.detail}} {{currentMeal.calories}}</li>
+      <li *ngFor="let currentMeal of meals">{{currentMeal.name}} {{currentMeal.details}} {{currentMeal.calories}}</li>
     </ul>
   `
 })
