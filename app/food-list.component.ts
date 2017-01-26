@@ -13,7 +13,7 @@ import { Meal } from './meal.model';
        </select>
 
         <ul>
-          <li *ngFor="let currentTask of childTaskList | filter:filterByCalories"><h3>{{currentMeal.name}}</h3><br> <p>{{currentMeal.details}}</p><br> <p>{{currentMeal.calories}}</p> Calorires<button class="btn btn-primary" (click)="editButtonHasBeenClicked(currentMeal)">Edit!</button></li>
+          <li *ngFor="let currentMeal of childMealList | filter:filterByCalories"><h3>{{currentMeal.name}}</h3><br> <p>{{currentMeal.details}}</p><br> <p>{{currentMeal.calories}}</p> Calorires<button class="btn btn-primary" (click)="editButtonHasBeenClicked(currentMeal)">Edit!</button></li>
         </ul>
       </div>
     </div>
